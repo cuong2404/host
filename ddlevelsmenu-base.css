@@ -1,35 +1,81 @@
-/* ######### TopbarCSS Menu all level NccSupports.com ######### */
-.mattblackmenu ul{
-margin-left: 00px;
-padding: 0;
-font: bold 14px Verdana;
-list-style-type: none;
-border-bottom: 0px solid gray;
-background: #eeeeee;
-overflow: hidden;
-width: 100%;
+/* ######### ddlevelmeu BaseCSS ######### */
+
+.ddsubmenustyle,
+.ddsubmenustyle div {
+    /*topmost and sub DIVs, respectively*/
+    
+    font: normal 13px Verdana;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    list-style-type: none;
+    background: white;
+    border: 1px solid black;
+    border-bottom-width: 0;
+    visibility: hidden;
+    z-index: 100;
 }
-.mattblackmenu li{
-display: inline;
-margin: 0px;
+.ddsubmenustyle ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    list-style-type: none;
+    border: 0px none;
 }
-.mattblackmenu li a{
-float: left;
-display: block;
-text-decoration: none;
-margin: 0;
-padding: 6px 8px; /*Khoang cach chu và khung tab*/
-border-right: 1px solid white; /*khoang cach cac tab voi nhau*/
-color: white; 
-background: #414141;
+.ddsubmenustyle li a {
+    display: block;
+    width: 170px;
+    /*width of menu (not including side paddings)*/
+    
+    color: black;
+    background-color: lightyellow;
+    text-decoration: none;
+    padding: 4px 5px;
+    border-bottom: 1px solid black;
 }
-.mattblackmenu li a:visited{
-color: white; /*Mau chu trong tab*/
+* html .ddsubmenustyle li {
+    /*IE6 CSS hack*/
+    
+    display: inline-block;
+    width: 170px;
+    /*width of menu (include side paddings of LI A*/
 }
-.mattblackmenu li a:hover{
-background: #00cd66; /*Nen khi chon tab menu */
+.ddsubmenustyle li a:hover {
+    background-color: black;
+    color: white;
 }
-.mattblackmenu a.selected{
-background: #00994d; /*Nen khi chon tung muc trong tab menu */
+/* ######### Neutral CSS  ######### */
+
+.downarrowpointer {
+    /*CSS for "down" arrow image added to top menu items*/
+    
+    padding-left: 4px;
+    border: 0;
 }
-/*end topbar*/
+.rightarrowpointer {
+    /*CSS for "right" arrow image added to drop down menu items*/
+    
+    position: absolute;
+    padding-top: 3px;
+    right: 3px;
+    border: 0;
+}
+.backarrowpointer {
+    /*CSS for "back" arrow image added to breadcrumb of mobile menu sub menus*/
+    
+    position: relative;
+    border: 0;
+}
+.ddiframeshim {
+    position: absolute;
+    z-index: 500;
+    background: transparent;
+    border-width: 0;
+    width: 0;
+    height: 0;
+    display: block;
+}
